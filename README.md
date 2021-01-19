@@ -20,7 +20,7 @@ Hubo problemas al compilar y se encontraron 3 causas:
 - roscpp
 - rospy
 - std_msgs
-- https://riptutorial.com/ros/example/28374/hello-world-publisher
+
 
 ## Referencias utilizadas o utiles
 - Gentle Introduction to ros
@@ -28,6 +28,7 @@ Hubo problemas al compilar y se encontraron 3 causas:
 - https://dabit-industries.github.io/turtlebot2-tutorials/08c-ROSCPP_Building.html
 - https://varhowto.com/cpp-ros-catkin-package/
 - https://www.wangzerui.com/2017/11/26/a-very-brief-ros-tutorial/
+- https://riptutorial.com/ros/example/28374/hello-world-publisher
 
 ## VERSION PRUEBA
 Última compilación sin error: 19 enero 2021
