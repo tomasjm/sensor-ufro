@@ -13,6 +13,7 @@ Hubo problemas al compilar y se encontraron 3 causas:
 - Los "types" que utiliza DJI_OSDK_ROS son estándares de ros basados en: "std_msgs", "sensor_msgs", "nmea_msgs"...Por lo tanto se pueden importar independientemente.
 
 ## Dependencias
+- Modulo base de datos https://github.com/tomasjm/sensor-ufro-bd
 - SQlite3, headers y sources en su respectiva carpeta "slite"
 - ROS
 - geometry_msgs
