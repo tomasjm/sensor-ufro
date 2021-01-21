@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
     ros::NodeHandle nh;
     batteryStateSub = nh.subscribe("dji_osdk_ros/battery_state",10,&batteryStateCallback);
     if (!ros::ok()) sqlite3_close(db_handle);
-    ROS_INFO_STREAM("Voltaje bateria: " << battery_state_.voltage, ", Carga de bateria: " << battery_state_.charge);
+    ROS_INFO_STREAM("Voltaje bateria: " << battery_state_.voltage << ", Carga de bateria: " << battery_state_.charge);
     ros::spin();
     return 0;
 
