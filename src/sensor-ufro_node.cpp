@@ -10,7 +10,7 @@ sensor_msgs::BatteryState battery_state_;
 
 void batteryStateCallback(const sensor_msgs::BatteryState::ConstPtr& batteryState) {
     battery_state_ = *batteryState;
-    ROS_INFO_STREAM("Voltaje bateria: " << (*batteryState).voltage, ", Carga de bateria: " << (*batteryState).charge);
+    
 }
 
 static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
@@ -25,7 +25,7 @@ static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 ros::Subscriber batteryStateSub;
 
 int main(int argc, char** argv) {
-    ros::init(argc, argv, "sensor-ufro_node");
+    ros::init(argc, argv, "sensor_ufro_node");
     sqlite3 *db_handle;
     char *sql;
     char * errorMsg = 0;
@@ -48,6 +48,7 @@ int main(int argc, char** argv) {
     ros::NodeHandle nh;
     batteryStateSub = nh.subscribe("dji_osdk_ros/battery_state",10,&batteryStateCallback);
     if (!ros::ok()) sqlite3_close(db_handle);
+    ROS_INFO_STREAM("Voltaje bateria: " << battery_state_.voltage, ", Carga de bateria: " << battery_state_.charge);
     ros::spin();
     return 0;
 
